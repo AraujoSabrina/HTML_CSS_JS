@@ -1,0 +1,42 @@
+body, h1{
+    margin: 0px;
+    padding: 0px;
+}
+.total{
+    background-color: rgb(221, 239, 245);
+    display: grid;
+    grid-template-areas: 'header header header'
+                        'conteiner conteiner conteiner';
+    
+}
+#header{
+    grid-area: header;
+    display: grid;
+    justify-content: center;
+}
+#conteiner {
+    
+    grid-area: conteiner;
+    height: 100vh;
+    justify-self: center;
+}
+#conteiner #formulario{
+    padding: 20px;
+    background-color: black;
+    height: 200px;
+    color: rgb(16, 168, 16);
+    display: grid;
+    align-items: center;
+    justify-items: end;
+    gap: 5px;
+  
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    
+   
+}
+
+#conteiner #formulario input{
+
+    padding: 6px;
+}    

@@ -6,6 +6,7 @@ if(num < 7){
 }
 var listaNomes = [];
 
+
 var obj = {
     nome: "Sabrina",
     idade: 20,
@@ -19,6 +20,7 @@ function btn_castrar(){
     console.log(nome)
     console.log(senha)
     var check = validaFormulario(nome, senha)
+    adcElementosHTML(nome)
     if(!check){
         alert("Informe os dados");
         return;
@@ -42,6 +44,7 @@ function validaFormulario(Nome, Senha){
       return true;
     }
 }
-function adcElementosHTML(){
-
+function adcElementosHTML(opa){
+    const ola = document.getElementById('lateral')
+    ola.innerHTML = `${opa}`
 }

@@ -49,3 +49,9 @@ body, h1{
     border: 5px;
     padding: 6px;
 }    
+#lateral{
+    background-color: aqua;
+    height: 100px;
+    width: 100px;
+    color: black;
+}

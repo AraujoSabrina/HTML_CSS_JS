@@ -13,6 +13,8 @@ var obj = {
 console.log(obj.idade)  
 
 function btn_castrar(){
+    var nome = document.getElementById('primeiroNome').value
+    console.log(nome);
     console.log('cadstro-btn');
 }
 function pegaLetra(event){

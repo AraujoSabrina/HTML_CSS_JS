@@ -7,12 +7,23 @@ body, h1{
     display: grid;
     grid-template-areas: 'header header header'
                         'conteiner conteiner conteiner';
+                        gap: 20px;
     
 }
 #header{
+    background-color: rgb(158, 183, 199);
+    height: 10vh;
+    text-transform: uppercase;
     grid-area: header;
-    display: grid;
-    justify-content: center;
+    display: flex;
+    padding-left: 50px;
+    justify-content: start;
+   
+    
+}
+#header h1{
+    display: flex;
+   align-items: center;
 }
 #conteiner {
     
@@ -29,14 +40,12 @@ body, h1{
     align-items: center;
     justify-items: end;
     gap: 5px;
-  
     grid-template-rows: 1fr 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     
    
 }
-
 #conteiner #formulario input{
-
+    border: 5px;
     padding: 6px;
 }    

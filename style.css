@@ -6,7 +6,8 @@ body, h1{
     background-color: rgb(221, 239, 245);
     display: grid;
     grid-template-areas: 'header header header'
-                        'lateral conteiner conteiner';
+                        'conteiner conteiner conteiner'
+                        'lateral lateral lateral';
                         gap: 20px;
     
 }
@@ -28,7 +29,7 @@ body, h1{
 #conteiner {
     
     grid-area: conteiner;
-    height: 100vh;
+    height: 75vh;
     justify-self: center;
 }
 #conteiner #formulario{
@@ -50,11 +51,12 @@ body, h1{
     padding: 6px;
 }    
 #lateral{
-    background-color: white;
-    height: 250px;
-    border-radius: 3px solid black;
-    display: grid;
+    
     grid-area: lateral;
-    grid-template-rows: 1fr 1fr;
-    color: black;
+    height: 10vh;
+    border: 3px solid black;
+    display: grid;
+    justify-self: center;
+    grid-template-columns: 1fr 1fr;
+    
 }

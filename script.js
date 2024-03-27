@@ -20,13 +20,13 @@ function btn_castrar(){
     console.log(nome)
     console.log(senha)
     var check = validaFormulario(nome, senha)
-    adcElementosHTML(nome)
+    adcElementosHTML(nome, senha)
     if(!check){
         alert("Informe os dados");
         return;
     }
     else{
-        alert("Ola "+ nome)
+        alert("Ola " + nome)
     }
     let pessoasObjeto = {nome, senha}
     listaNomes.push(pessoasObjeto)
@@ -44,7 +44,10 @@ function validaFormulario(Nome, Senha){
       return true;
     }
 }
-function adcElementosHTML(opa){
-    const ola = document.getElementById('lateral')
-    ola.innerHTML = `${opa}`
+function adcElementosHTML(nome, senha){
+    const nomes = document.getElementById('nome')
+    const senhas = document.getElementById('senha')
+    
+    nomes.innerHTML = `${nome}`
+    senhas.innerHTML = `${senha}`
 }

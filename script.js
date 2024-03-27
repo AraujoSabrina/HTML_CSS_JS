@@ -4,6 +4,9 @@ if(num < 7){
 }else{
     console.log("ola");
 }
+
+
+let id = 0;
 var listaNomes = [];
 
 
@@ -20,17 +23,20 @@ function btn_castrar(){
     console.log(nome)
     console.log(senha)
     var check = validaFormulario(nome, senha)
-    adcElementosHTML(nome, senha)
+    
     if(!check){
-        alert("Informe os dados");
+       alert("Informe os dados");
         return;
     }
     else{
-        alert("Ola " + nome)
+        
+        //alert("Ola " + nome)
     }
     let pessoasObjeto = {nome, senha}
     listaNomes.push(pessoasObjeto)
-    console.log(listaNomes)
+    console.log("Nome:" + pessoasObjeto.nome)
+    adcElementosHTML(pessoasObjeto)
+    
 }
 function pegaLetra(event){
     console.log(event.key);
@@ -44,10 +50,33 @@ function validaFormulario(Nome, Senha){
       return true;
     }
 }
-function adcElementosHTML(nome, senha){
-    const nomes = document.getElementById('nome')
-    const senhas = document.getElementById('senha')
+function adcElementosHTML(pessoasObjeto){
+    const lista = document.getElementById('lista')
+
+    var div = document.createElement("div");
+
+
+    id++;
+    div.innerHTML = `${pessoasObjeto.nome} ${pessoasObjeto.senha} <button class='${id}'> Deletar </button>`;
     
-    nomes.innerHTML = `${nome}`
-    senhas.innerHTML = `${senha}`
+    //qndo adc filh
+    lista.appendChild(div);
+
+    ///////////////////////////
+    DeletarTarefa();
+    
+}
+
+function DeletarTarefa(){
+
+  let buttonsDeletar = document.querySelectorAll("button");
+
+    for(let i = 0; i < buttonsDeletar.length; i++){
+
+        buttonsDeletar[i].addEventListener("click", (e)=>{
+            e.target.parentNode.remove();
+        })
+
+    }
+
 }

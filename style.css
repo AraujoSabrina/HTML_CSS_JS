@@ -2,6 +2,7 @@ body, h1{
     margin: 0px;
     padding: 0px;
 }
+
 .total{
     background-color: rgb(221, 239, 245);
     display: grid;
@@ -29,13 +30,13 @@ body, h1{
 #conteiner {
     
     grid-area: conteiner;
-    height: 75vh;
+    height: 70vh;
     justify-self: center;
 }
 #conteiner #formulario{
     padding: 20px;
     background-color: black;
-    height: 200px;
+    height: 150px;
     color: rgb(16, 168, 16);
     display: grid;
     align-items: center;
@@ -53,10 +54,17 @@ body, h1{
 #lateral{
     
     grid-area: lateral;
-    height: 10vh;
+    height: 20vh;
     border: 3px solid black;
     display: grid;
     justify-self: center;
     grid-template-columns: 1fr 1fr;
     
 }
+
+.fa
+{
+    background-color: black;
+    color: white;
+}
+

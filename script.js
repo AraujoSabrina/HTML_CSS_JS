@@ -15,6 +15,7 @@ var obj = {
     idade: 20,
     desc: "oo"
 }
+
 console.log(obj.idade)  
 
 function btn_castrar(){
@@ -67,6 +68,7 @@ function adcElementosHTML(pessoasObjeto){
     
 }
 
+
 function DeletarTarefa(){
 
   let buttonsDeletar = document.querySelectorAll("button");
@@ -75,6 +77,7 @@ function DeletarTarefa(){
 
         buttonsDeletar[i].addEventListener("click", (e)=>{
             e.target.parentNode.remove();
+
         })
 
     }
